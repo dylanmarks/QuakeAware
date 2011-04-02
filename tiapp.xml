@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+<id>org.QuakeAware</id>
+<name>QuakeAware</name>
+<version>1.3</version>
+<publisher>dmarks</publisher>
+<url>http://quakeaware.org</url>
+<description>Provides survival information and tools stored locally on your phone to prepare and react in the event of an earthquake</description>
+<copyright>2010 by QuakeAware.Org</copyright>
+<icon>QuakeAwareIcon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <analytics>true</analytics>
+<guid>054584c5-5949-4e58-8414-bcfd55390dde</guid>
+<property name="ti.android.loadfromsdcard" type="bool">true</property>
+<property name="ti.android.google.map.api.key">0VIZzlqmNEoOA1yWEfPY9UImql4qMVZ7qaNpQvg</property>
+</ti:app> 

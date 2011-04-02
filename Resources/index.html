@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<title>QuakeAware</title>
+	<link href="index.css" rel="stylesheet" type="text/css"/>
+	
+	<script type="text/javascript">
+	function openPopUpPage() {
+		
+    	//Ti.App.fireEvent('openPopUpPage', this.url); // onclick="openPopUpPage(this.href);return false;"
+    	return false;
+	}
+	</script>
+</head>
+<body>
+	
+	<h1>Welcome to Quake Aware</h1>
+	<p>
+		This application is a reference manual to help you prepare for an earthquake. Since the information provided is stored on your phone, it will be available in the event of an earthquake where internet access will likely be unavailable.
+		</p>
+	<p>Please note that this application is provided as a convenient reference only, and QuakeAware does not provide warranty for any information contained here. Call 911 for emergencies!</p>
+	<p align="center"><a href="disclaimer.html"  class="popUp"  style="color: #EF1084;">Read our disclaimer!</a>
+	<br /> <a href="http://quakeaware.org">View the Quake Aware Home Page</a></p>
+<h1>Realtime Earthquake Alerts:</h1>
+
+<style type="text/css">
+		.tweet ul    { 
+			list-style:none outside none;
+			padding:0;
+			list-style: none; 
+			margin: 0 0 0 5px; 
+			}
+		.tweet li    { 
+			 margin: 0;
+			 padding: 0;
+			 border-bottom: 1px solid #BBB;
+			 padding-bottom: 10px;
+			 margin-bottom: 10px;
+			 }	
+		
+	</style>
+	<div id="tweet1" class="tweet">
+	 <p>Please wait while the twitter feed loads... <img src="/images/ajax-loader.gif" /></p>
+	 <!--<p><a href="http://twitter.com/rem">View the twitter feed...</a></p>-->
+	</div>
+	<h1>QuakeAware News</h1>
+	<div id="tweet2" class="tweet">
+	 <p>Please wait while the twitter feed loads... <img src="/images/ajax-loader.gif" /></p>
+	 <!--<p><a href="http://twitter.com/rem">View the twitter feed...</a></p>-->
+	</div>
+	<script  src="libraries/twitter.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	getTwitters('tweet1', { 
+	  id: 'earthquake', 
+	  count: 5, 
+	  enableLinks: true, 
+	  ignoreReplies: true, 
+	  clearContents: true,
+	  template: '%text% <a  href="http://twitter.com/%user_screen_name%/statuses/%id%/">%time%</a>'
+	});
+	getTwitters('tweet2', { 
+	  id: 'quakeawareorg', 
+	  count: 10, 
+	  enableLinks: true, 
+	  ignoreReplies: true, 
+	  clearContents: true,
+	  template: '%text% <a  href="http://twitter.com/%user_screen_name%/statuses/%id%/">%time%</a>'
+	});
+</script>
+<script  src="libraries/openLinksInSafari.js" type="text/javascript"></script>
+</body>
+</html>

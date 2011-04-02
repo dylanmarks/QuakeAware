@@ -1,0 +1,1787 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>QuakeAware</title>
+        <script type="text/javascript" src="../../index.js">
+        </script>
+        <link href="../../index.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">        
+            /* default css */
+            table {
+                font-size: 1em;
+                line-height: inherit;
+                border-collapse: collapse;
+            }
+            
+            tr {
+                text-align: left;
+            }
+            
+            div, address, ol, ul, li, option, select {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            
+            p {
+                margin: 0px;
+            }
+            
+            pre {
+                font-family: Courier New;
+                white-space: pre-wrap;
+                margin: 0;
+            }
+            
+            body {
+                margin: 6px;
+                padding: 0px;
+                font-family: Verdana, sans-serif;
+                font-size: 10pt;
+                background-color: #ffffff;
+                color: #000;
+            }
+            
+            img {
+                -moz-force-broken-image-icon: 1;
+            }
+            @media screen {html.pageview {
+                    background-color: #f3f3f3 !important;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+            }
+            
+            body {
+                    min-height: 1100px;
+                    counter-reset: __goog_page__;
+            }
+                *html body {
+                    height: 1100px;
+            }
+            
+                /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+                 targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+                 That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+            html *#wys_frame::before {
+                    content: '\A0';
+                    position: fixed;
+                    overflow: hidden;
+                    width: 0;
+                    height: 0;
+                    top: 0;
+                    left: 0;
+            }
+            
+            .pageview body {
+                    border-top: 1px solid #ccc;
+                    border-left: 1px solid #ccc;
+                    border-right: 2px solid #bbb;
+                    border-bottom: 2px solid #bbb;
+                    width: 648px !important;
+                    margin: 15px auto 25px;
+                    padding: 40px 50px;
+            }
+            
+                /* IE6 */ * html {
+                    overflow-y: scroll;
+            }
+                * html.pageview body {
+                    overflow-x: auto;
+            }
+            
+            .writely-callout-data {
+                    display: none;
+            }
+            
+            .writely-footnote-marker {
+                    background-image: url('MISSING');
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    width: 7px;
+                    overflow: hidden;
+                    height: 16px;
+                    vertical-align: top;
+                    -moz-user-select: none;
+            }
+            
+            .editor .writely-footnote-marker {
+                    cursor: move;
+            }
+            
+            .writely-footnote-marker-highlight {
+                    background-position: -15px 0;
+                    -moz-user-select: text;
+            }
+            
+            .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+                    background: transparent;
+            }
+            
+            .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+                    background: transparent;
+            }
+            
+            .writely-footnote-hide-selection {
+                    cursor: move;
+            }
+            
+                /* Comments */
+            .writely-comment-yellow {
+                    background-color: #ffffd7;
+            }
+            
+            .writely-comment-orange {
+                    background-color: #ffe3c0;
+            }
+            
+            .writely-comment-pink {
+                    background-color: #ffd7ff;
+            }
+            
+            .writely-comment-green {
+                    background-color: #d7ffd7;
+            }
+            
+            .writely-comment-blue {
+                    background-color: #d7ffff;
+            }
+            
+            .writely-comment-purple {
+                    background-color: #eed7ff;
+            }
+            
+            .br_fix span + br:
+                not(:-moz-last-node) {position:relative;
+                    left:
+                    -1ex
+            }
+            
+            #cb-p-tgt {
+                    font-size: 8pt;
+                    padding: .4em;
+                    background-color: #ddd;
+                    color: #333;
+            }
+            
+            #cb-p-tgt-can {
+                    text-decoration: underline;
+                    color: #36c;
+                    font-weight: bold;
+                    margin-left: 2em;
+            }
+            
+            #cb-p-tgt .spin {
+                    width: 16px;
+                    height: 16px;
+                    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+            }
+            }
+            
+            h6 {
+                font-size: 8pt
+            }
+            
+            h5 {
+                font-size: 8pt
+            }
+            
+            h4 {
+                font-size: 10pt
+            }
+            
+            h3 {
+                font-size: 12pt
+            }
+            
+            h2 {
+                font-size: 14pt
+            }
+            
+            h1 {
+                font-size: 18pt
+            }
+            
+            blockquote {
+                padding: 10px;
+                border: 1px #DDD dashed
+            }
+            
+            .webkit-indent-blockquote {
+                border: none;
+            }
+            
+            a img {
+                border: 0
+            }
+            
+            .pb {
+                border-width: 0;
+                page-break-after: always;
+                /* We don't want this to be resizeable, so enforce a width and height
+                 using !important */
+                height: 1px !important;
+                width: 100% !important;
+            }
+            
+            .editor .pb {
+                border-top: 1px dashed #C0C0C0;
+                border-bottom: 1px dashed #C0C0C0;
+            }
+            
+            div.google_header, div.google_footer {
+                position: relative;
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+            
+            /* Table of contents */
+            .editor div.writely-toc {
+                background-color: #f3f3f3;
+                border: 1px solid #ccc;
+            }
+            
+            .writely-toc > ol {
+                padding-left: 3em;
+                font-weight: bold;
+            }
+            
+            ol.writely-toc-subheading {
+                padding-left: 1em;
+                font-weight: normal;
+            }
+            
+            /* IE6 only */ * html writely-toc ol {
+                list-style-position: inside;
+            }
+            
+            .writely-toc-none {
+                list-style-type: none;
+            }
+            
+            .writely-toc-decimal {
+                list-style-type: decimal;
+            }
+            
+            .writely-toc-upper-alpha {
+                list-style-type: upper-alpha;
+            }
+            
+            .writely-toc-lower-alpha {
+                list-style-type: lower-alpha;
+            }
+            
+            .writely-toc-upper-roman {
+                list-style-type: upper-roman;
+            }
+            
+            .writely-toc-lower-roman {
+                list-style-type: lower-roman;
+            }
+            
+            .writely-toc-disc {
+                list-style-type: disc;
+            }
+            
+            /* Ordered lists converted to numbered lists can preserve ordered types, and
+             vice versa. This is confusing, so disallow it */
+            ul[type =
+            "i"], ul[type = "I"], ul[type = "1"], ul[type = "a"], ul[type = "A"] {
+                list-style-type: disc;
+            }
+            
+            ol[type =
+            "disc"], ol[type = "circle"], ol[type = "square"] {
+                list-style-type: decimal;
+            }
+            
+            /* end default css */
+            /* default print css */
+            @media print {body {
+                    padding: 0;
+                    margin: 0;
+            }
+            
+            div.google_header, div.google_footer {
+                    display: block;
+                    min-height: 0;
+                    border: none;
+            }
+            
+            div.google_header {
+                    flow: static(header);
+            }
+            
+                /* used to insert page numbers */
+            div.google_header::before, div.google_footer::before {
+                    position: absolute;
+                    top: 0;
+            }
+            
+            div.google_footer {
+                    flow: static(footer);
+            }
+            
+                /* always consider this element at the start of the doc */
+            div#google_footer {
+                    flow: static(footer, start);
+            }
+            
+            span.google_pagenumber {
+                    content: counter(page);
+            }
+            
+            span.google_pagecount {
+                    content: counter(pages);
+            }
+            
+            .endnotes {
+                    page: endnote;
+            }
+            
+                /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+                @page endnote {margin-top:
+                    1in;
+            }
+            
+            callout.google_footnote {
+                    display: prince-footnote;
+                    footnote-style-position: inside;
+                    /* These styles keep the footnote from taking on the style of the text
+                     surrounding the footnote marker. They can be overridden in the
+                     document CSS. */
+                    color: #000;
+                    font-family: Verdana;
+                    font-size: 10.0pt;
+                    font-weight: normal;
+            }
+            
+                /* Table of contents */
+            #WritelyTableOfContents a::after {
+                    content: leader('.') target-counter(attr(href), page);
+                                }
+                                #WritelyTableOfContents a {
+                                text-decoration: none;
+                                color: black;
+                                }
+                                /* Comments */
+                                .writely-comment-yellow {
+                                background-color: #ffffd7;
+                                }
+                                .writely-comment-orange {
+                                background-color: #ffe3c0;
+                                }
+                                .writely-comment-pink {
+                                background-color: #ffd7ff;
+                                }
+                                .writely-comment-green {
+                                background-color: #d7ffd7;
+                                }
+                                .writely-comment-blue {
+                                background-color: #d7ffff;
+                                }
+                                .writely-comment-purple {
+                                background-color: #eed7ff;
+                                }
+                                }
+                                @page {
+                                @top {
+                                content: flow(header);
+                                }
+                                @bottom {
+                                content: flow(footer);
+                                }
+                                @footnotes {
+                                border-top: solid black thin;
+                                padding-top: 8pt;
+                                }
+                                }
+                                /* end default print css */
+                                /* custom css */
+                                /* end custom css */
+                                /* ui edited css */
+                                body {
+                                font-family: Verdana;
+                                font-size: 10.0pt;
+                                line-height: normal;
+                                background-color: #ffffff;
+                                }
+                                /* end ui edited css */
+                                /* editor CSS */
+                                .editor a:visited {color: #551A8B}
+                                .editor table.zeroBorder {border: 1px dotted gray}
+                                .editor table.zeroBorder td {border: 1px dotted gray}
+                                .editor table.zeroBorder th {border: 1px dotted gray}
+                                .editor div.google_header, .editor div.google_footer {
+                                border: 2px #DDDDDD dashed;
+                                position: static;
+                                width: 100%;
+                                min-height: 2em;
+                                }
+                                .editor .misspell {background-color: yellow}
+                                .editor .writely-comment {
+                                font-size: 9pt;
+                                line-height: 1.4;
+                                padding: 1px;
+                                border: 1px dashed #C0C0C0
+                                }
+                                /* end editor CSS */
+                                
+                    
+        </style>
+    </head>
+    <body>
+        <div id="doc-contents">
+            <h1>
+Richmond, BC:<br />Where to Go In An Emergency   </h1>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        In the event of an emergency, Tune into CBC 690 AM to find your local Reception Center. 
+                    </font>
+                </font>
+            </p>
+         
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Reception Centers will generally be in one of Richmond's many Community Centers. Make sure you confirm by tuning in to local radio before going to one of these centers, since they 
+						may not be safe locations. We are providing this information simply as an informational tool and not as an official directive for meeting in an emergency. 
+						
+                    </font>
+                </font>
+            </p>
+           
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Sea Island Community Centre</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        B.C. V7B 1L4
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-718-8000
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-718-8001
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email: <a href="mailto:seaisland@richmond.ca">seaisland@richmond.ca</a>
+                    </font>
+                </font>
+            </p>
+             <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="20%">
+                        Mon
+                    </td>
+                    <td width="20%">
+                        Tue
+                    </td>
+                    <td width="20%">
+                        Wed
+                    </td>
+                    <td width="20%">
+                        Thu
+                    </td>
+                    <td width="20%">
+                        Fri-Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        9am - 1pm<
+                    </td>
+                    <td width="20%">
+                        9am - 5pm
+                    </td>
+                    <td width="20%">
+                        2pm - 9pm
+                    </td>
+                    <td width="20%">
+                        1pm - 5pm
+                    </td>
+                    <td width="20%">
+                        CLOSED
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Thompson Community Centre</b> 
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        5151 Granville Avenue
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , B.C. V7C 1E6
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-718-8422
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-718-8433
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email: <a href="mailto:thompson@richmond.ca">thompson@richmond.ca</a>
+                    </font>
+                </font>
+            </p>
+            
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="50%">
+                        Mon-Fri
+                    </td>
+                    <td width="50%">
+                        Sat-Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        6am - 9:45pm
+                    </td>
+                    <td width="50%">
+                        8am - 8:45pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Lang Centre (City Centre)</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        #140-8279 Saba Road
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , BC V6Y 4B6
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-233-8910
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-233-8916
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email: <a href="mailto:citycentre@richmond.ca">citycentre@richmond.ca</a>
+                    </font>
+                </font>
+            </p>
+            
+             <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Spring Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="20%">
+                        Mon & Fri
+                    </td>
+                    <td width="20%">
+                        Tue & Wed
+                    </td>
+                    <td width="20%">
+                        Thu
+                    </td>
+                    <td width="20%">
+                        Sat
+                    </td>
+                    <td width="20%">
+                        Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        9am - 5pm
+                    </td>
+                    <td width="20%">
+                        9am - 8pm
+                    </td>
+                    <td width="20%">
+                        9am - 6pm
+                    </td>
+                    <td width="20%">
+                        9am - 2pm
+                    </td>
+                    <td width="20%">
+                        CLOSED
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Summer Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="20%">
+                        Mon-Wed
+                    </td>
+                    <td width="20%">
+                        Thu
+                    </td>
+                    <td width="20%">
+                        Fri
+                    </td>
+                    <td width="20%">
+                        Sat
+                    </td>
+                    <td width="20%">
+                        Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        8:30am - 8pm
+                    </td>
+                    <td width="20%">
+                        8:30am - 7pm
+                    </td>
+                    <td width="20%">
+                        8:30am - 5pm
+                    </td>
+                    <td width="20%">
+                        9am - 1pm
+                    </td>
+                    <td width="20%">
+                        CLOSED
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Fall/Winter Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="14.29%">
+                        Mon
+                    </td>
+                    <td width="14.29%">
+                        Tue
+                    </td>
+                    <td width="14.29%">
+                        Wed
+                    </td>
+                    <td width="14.29%">
+                        Thu
+                    </td>
+                    <td width="14.29%">
+                        Fri
+                    </td>
+                    <td width="14.29%">
+                        Sat
+                    </td>
+                    <td width="14.29%">
+                        Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="14.29%">
+                        9am - 6:30pm
+                    </td>
+                    <td width="14.29%">
+                        9am - 7:30pm
+                    </td>
+                    <td width="14.29%">
+                        9am - 8pm
+                    </td>
+                    <td width="14.29%">
+                        9am - 6:30pm
+                    </td>
+                    <td width="14.29%">
+                        9am - 5pm
+                    </td>
+                    <td width="14.29%">
+                        9am - 2pm
+                    </td>
+                    <td width="14.29%">
+                        CLOSED
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+
+
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Cambie Community Centre</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        12800 Cambie Road
+                    </font>
+                </font> 
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , B.C. V6V 0A9
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-233-8399
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-278-2609
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email: <a href="mailto:cambie@richmond.ca">cambie@richmond.ca</a>
+                    </font>
+                </font>
+            </p>
+
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Fall/Winter/Spring Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="33.33%">
+                        Mon-Fri
+                    </td>
+                    <td width="33.33%">
+                        Sat
+                    </td>
+                    <td width="33.33%">
+                        Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33.33%">
+                        7am - 9:45pm
+                    </td>
+                    <td width="33.33%">
+                        9am - 8:45pm
+                    </td>
+                    <td width="33.33%">
+                        9am - 9:45pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Summer Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="50%">
+                        Mon-Fri
+                    </td>
+                    <td width="50%">
+                        Sat-Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        7am - 9:45pm
+                    </td>
+                    <td width="50%">
+                        9am - 4pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>West Richmond</b>
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        <b>Community Centre</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        9180 No. 1 Road
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , B.C. V7E 6L5
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-718-8400
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-718-8414
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email: <a href="mailto:westrich@richmond.ca">westrich@richmond.ca</a>
+                    </font>
+                </font>
+            </p>
+            
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Fall/Winter/Spring Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="50%">
+                        Mon-Fri
+                    </td>
+                    <td width="50%">
+                        Sat-Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        8:30am - 9:30pm
+                    </td>
+                    <td width="50%">
+                        9am - 4:30pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Summer Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="33.33%">
+                        Mon-Thu
+                    </td>
+                    <td width="33.33%">
+                        Fri
+                    </td>
+                    <td width="33.33%">
+                        Sat & Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33.33%">
+                        8:30am - 8:30pm
+                    </td>
+                    <td width="33.33%">
+                        8:30am - 6pm
+                    </td>
+                    <td width="33.33%">
+                        9am - 1pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Steveston Community Centre</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        4111 Moncton Street
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , B.C., V7E 3A8
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-718-8080
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-718-8096
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email:&nbsp;<a href="mailto:stevestoncc@richmond.ca">stevestoncc@richmond.ca</a> 
+                    </font>
+                </font>
+            </p>
+
+
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Fall/Winter/Spring Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="33.33%">
+                        Mon-Fri
+                    </td>
+                    <td width="33.33%">
+                        Sat
+                    </td>
+                    <td width="33.33%">
+                        Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33.33%">
+                        6am - 9:45pm
+                    </td>
+                    <td width="33.33%">
+                        8am - 5:45pm
+                    </td>
+                    <td width="33.33%">
+                        8am - 4:45pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Summer Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="33.33%">
+                        Mon-Fri
+                    </td>
+                    <td width="33.33%">
+                        Sat
+                    </td>
+                    <td width="33.33%">
+                        Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33.33%">
+                        6am - 8:45pm
+                    </td>
+                    <td width="33.33%">
+                        8am - 4:45pm
+                    </td>
+                    <td width="33.33%">
+                        8am - 12:45pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>South Arm Community Centre</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        8880 Williams Road
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-718-8060
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-718-8065
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email: <a href="mailto:southarm@richmond.ca">southarm@richmond.ca</a>
+                    </font>
+                </font>
+            </p>
+                        
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Sept - June Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="50%">
+                        Mon-Fri
+                    </td>
+                    <td width="50%">
+                        Sat-Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        6am - 10pm
+                    </td>
+                    <td width="50%">
+                        8:30am - 9:00pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>July/August Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="50%">
+                        Mon-Fri
+                    </td>
+                    <td width="50%">
+                        Sat-Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        6am - 9:30pm
+                    </td>
+                    <td width="50%">
+                        8:30am - 5pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Hamilton Community Centre</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        5140 Smith Drive
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , BC V6V 2W5
+                    </font>
+                </font> 
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: 604-718-8055
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Fax: 604-718-8053
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Email: <a href="mailto:hamilton@richmond.ca">hamilton@richmond.ca</a>
+                    </font>
+                </font>
+            </p>
+            
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Facility Hours</b>
+                    </font>
+                </font>
+            </p>            
+            <p>
+            <table width="100%" cellspacing="0" cellpadding="3" bordercolor="#000000" border="1" id="i2ed">
+            <tbody>
+                <tr>
+                    <td width="20%">
+                        Mon
+                    </td>
+                    <td width="20%">
+                        Tue-Thu
+                    </td>
+                    <td width="20%">
+                        Fri
+                    </td>
+                    <td width="20%">
+                        Sat
+                    </td>
+                    <td width="20%">
+                        Sun
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        8:30am - 4:30pm
+                    </td>
+                    <td width="20%">
+                        8:30am - 10pm
+                    </td>
+                    <td width="20%">
+                        8:30am - 4:30pm
+                    </td>
+                    <td width="20%">
+                        9:30am - 4:00pm
+                    </td>
+                    <td width="20%">
+                        11am - 2:30pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+            
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Unofficially, if immediate assistance is required, the following stations are manned 24/7 and holidays and have resources to assist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Richmond City Firehalls:</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        No. 1 Hall (Headquarters)
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        6960
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        Gilbert Rd, V7C 3V4
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        No. 2 Hall (Steveston)
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        11011 No. 2 Rd, V7E 2E6
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        No. 3 Hall (Bridgeport)
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        9100
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        Bridgeport Rd, V6X 1S1
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        No. 4 Hall (Sea Island)
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        3911
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        Russ Baker Way, V7B 1M7
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        No. 5 Hall (Hamilton)
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        22451
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        Westminster Hwy, V6V 1B6
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        No. 6 Hall (Shellmont)
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        9400 No. 4 Rd, V7A 2Y9
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        No. 7 Hall (Crestwood)
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        5731 No. 6 Rd, V6V 1T2
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Airport - ERS</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Incidentally, there is a Emergency Response Service at YVR International Airport; however, this service is under the juristiction of YVR and not the City of Richmond.
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Richmond Military Armories:</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        The Colonel Sherman Armoury
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        12 (Vancouver) Service Battalion
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        5500 No. 4 Road
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , BC V6X 3L5
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        (604) 666-4093
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        http://www.12servicebattalion.com/default.htm
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Emergency Medical Services:</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond General
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        Hospital
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        7000 Westminster Highway
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        BC V6X 1A2
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        (604) 278-9711
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        <b>Police Services:</b>
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        RCMP Richmond Detachment
+                    </font>
+                </font>
+            </p>
+            <p>
+                &nbsp;
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        6900 Minoru Blvd
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Richmond
+                    </font>
+                </font>
+                <font face="arial">
+                    <font size="2">
+                        , British Columbia
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        V6Y 1Y3&nbsp; Canada
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        Phone: (604) 278-1212
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font face="arial">
+                    <font size="2">
+                        For Emergencies Call 9-1-1
+                    </font>
+                </font>
+            </p>
+            <br>
+            <br clear="all">
+        </div>
+    </body>
+</html>

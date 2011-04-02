@@ -1,0 +1,73 @@
+/* pink: #ed1981 
+ * blue: #1766b1
+ * */
+
+body
+{
+	background-color:#FFF;
+	color:#000;
+	font-family:sans-serif;
+	font-size: 13px;
+}
+* {
+	font-size: 13px;
+	
+}
+
+a{
+	text-decoration: none;
+	color:#1766B1;
+}
+
+a:active {
+color:#ED1981;
+text-decoration:underline;
+}
+
+h1,h2, h3
+{
+	color:#1766b1;
+	border-bottom: 1px solid #ed1981;
+	margin-bottom:20px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align:center;
+}
+h2 {
+	font-size: 16px;
+	border: none;
+	text-align:left;
+	
+}
+h3 {
+	font-size: 14px;
+	border: none;
+	margin-bottom: 10px;
+	text-align:left;
+}
+
+
+#header 
+{
+	text-align: center;	
+	
+}
+
+ul.checklist li
+{
+	list-style: none;	
+	margin: 5px 0;
+	
+}
+
+a.linkbutton
+{
+	display:block;
+	padding: 10px 20px 10px 20px;
+	width: 200px;
+	margin-left: 10px;
+	text-align: center;
+	background-color: #CCC;
+	
+}
+
