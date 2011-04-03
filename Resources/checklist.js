@@ -1,13 +1,13 @@
-print = Ti.API.info; //for debugging 
+
 /*
 if (PageParameters != null && PageParameters.category != null) //see navigationControl openUrl function for where PageParameters set
 {
-	print("From PageParameters: "  + PageParameters.category);
+	Ti.API.info("From PageParameters: "  + PageParameters.category);
 	categoryFilter = PageParameters.category;
 }
 */
 var categoryFilter = Titanium.App.Properties.getString('checkListCategory');	
-print("category:" + categoryFilter);
+Ti.API.info("category:" + categoryFilter);
 //uses sqlite database to store which items have been checked
 function getDatabase()
 {
@@ -58,7 +58,7 @@ function addCategoryColumnIfNotExists(db)
 		}
 		databaseRows.next();
 	}	
-	print("category column found = " + found);
+	Ti.API.info("category column found = " + found);
 	if (found != true) {
 		db.execute("ALTER TABLE SurvivalList ADD COLUMN Category TEXT");
 	}
@@ -67,7 +67,7 @@ function addCategoryColumnIfNotExists(db)
 }
 
 
-print("About to open database.js");
+Ti.API.info("About to open database.js");
 
 //ensure that the different options are already stored in the database. This should be pulled from an xml file or something!
 var db = getDatabase();
@@ -86,7 +86,7 @@ Ti.include("checklist-data.js");
 var id;
 for (var i = 0; i < checklistData.length; i++)
 {
-	print("checkData " + checklistData[i].Category);
+	Ti.API.info("checkData " + checklistData[i].Category);
 	if (checklistData[i].Category == categoryFilter) {
 		id = ensureItemInDBTable(checklistData[i].Name, categoryFilter, db);
 	}
@@ -108,7 +108,7 @@ while (databaseRows.isValidRow())
 	//should really check whether this is still a valid row, and delete from the database if not
 	var id = databaseRows.fieldByName('RowID');
 	var tableRow = Ti.UI.createTableViewRow();
-	print("db row cat: " + databaseRows.fieldByName("Category"));
+	Ti.API.info("db row cat: " + databaseRows.fieldByName("Category"));
 	tableRow.hasCheck = (databaseRows.fieldByName("hasCheck") == 1) ? true : false;
 	//tableRow.hasDetail = true;
 	tableRow.ID = id;
@@ -174,6 +174,4 @@ tableview.addEventListener('click', function(e)
 // add table view to the window
 var win = Ti.UI.currentWindow;
 win.add(tableview);
-
-win.open();
 

@@ -1,21 +1,21 @@
 
-Ti.API.info("test");
+
 Ti.include("navigationControl.js");
 Ti.include("checklist-data.js");
 
 function tableRowContainsCat(tableRows, cat) {
-	Ti.API.info("checking " + cat);
+	//Ti.API.info("checking " + cat);
   var i = tableRows.length;
   while (i--) {
     if (tableRows[i].title == cat) {
-		Ti.API.info("found " + tableRows[i].title);
+		//Ti.API.info("found " + tableRows[i].title);
       return true; 
     }
   }
   return false;
 }
 
-Ti.API.info("test3");
+
 Titanium.API.info('checklistData = ' + checklistData.length);
 
 
@@ -36,16 +36,17 @@ function getCategoryList(checklistData, tableRows){
 	}
 	return tableRows;
 }
-Titanium.API.info('tableRows = ' + tableRows.length);
+
 
 tableRows = getCategoryList(checklistData, tableRows);
 //Titanium.API.info('ROW COUNT = ' + tableRows.length);
-	
+Titanium.API.info('tableRows = ' + tableRows.length);	
 // create table view
 var tableview = Titanium.UI.createTableView({
-	data:tableRows,
-	style: Titanium.UI.iPhone.TableViewStyle.GROUPED
+	data:tableRows
+	//,style: Titanium.UI.iPhone.TableViewStyle.GROUPED
 });
+	
 
 
 
@@ -65,8 +66,8 @@ tableview.addEventListener('click', function(e)
 	openUrl(rowData, {category:category} );	
 	
 });
+Titanium.API.info(tableview);
 
 // add table view to the window
-var win = Ti.UI.currentWindow;
-win.add(tableview);
-win.open();
+Titanium.UI.currentWindow.add(tableview);
+

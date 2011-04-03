@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-<id>org.QuakeAware</id>
+<id>com.QuakeAware</id>
 <name>QuakeAware</name>
-<version>1.3</version>
+<version>1.4</version>
 <publisher>dmarks</publisher>
 <url>http://quakeaware.org</url>
 <description>Provides survival information and tools stored locally on your phone to prepare and react in the event of an earthquake</description>
