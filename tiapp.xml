@@ -1,5 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="iphone">true</target>
+    </deployment-targets>
 <id>com.QuakeAware</id>
 <name>QuakeAware</name>
 <version>1.4</version>
@@ -16,4 +20,4 @@
 <guid>054584c5-5949-4e58-8414-bcfd55390dde</guid>
 <property name="ti.android.loadfromsdcard" type="bool">true</property>
 <property name="ti.android.google.map.api.key">0VIZzlqmNEoOA1yWEfPY9UImql4qMVZ7qaNpQvg</property>
-</ti:app> 
+</ti:app>

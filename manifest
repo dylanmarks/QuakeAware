@@ -1,8 +1,8 @@
-#appname: QuakeAware
-#publisher: dmarks
-#url: http://quakeaware.org
-#image: appicon.png
-#appid: org.quakeaware
-#desc: undefined
-#type: mobile
-#guid: fb6476ee-d96f-478c-a7f3-a787f9f44599
+#appname:QuakeAware
+#publisher:dmarks
+#url:http://quakeaware.org
+#image:appicon.png
+#appid:com.QuakeAware
+#desc:Provides survival information and tools stored locally on your phone to prepare and react in the event of an earthquake
+#type:mobile
+#guid:fb6476ee-d96f-478c-a7f3-a787f9f44599

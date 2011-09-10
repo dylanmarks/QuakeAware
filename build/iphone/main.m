@@ -8,13 +8,13 @@
 #define STRING(x) _QUOTEME(x)
 
 NSString * const TI_APPLICATION_DEPLOYTYPE = @"development";
-NSString * const TI_APPLICATION_ID = @"org.QuakeAware";
+NSString * const TI_APPLICATION_ID = @"com.QuakeAware";
 NSString * const TI_APPLICATION_PUBLISHER = @"dmarks";
 NSString * const TI_APPLICATION_URL = @"http://quakeaware.org";
 NSString * const TI_APPLICATION_NAME = @"QuakeAware";
-NSString * const TI_APPLICATION_VERSION = @"1.3";
+NSString * const TI_APPLICATION_VERSION = @"1.4";
 NSString * const TI_APPLICATION_DESCRIPTION = @"Provides survival information and tools stored locally on your phone to prepare and react in the event of an earthquake";
-NSString * const TI_APPLICATION_COPYRIGHT = @"2010 by QuakeAware.Org t";
+NSString * const TI_APPLICATION_COPYRIGHT = @"2010 by QuakeAware.Org";
 NSString * const TI_APPLICATION_GUID = @"054584c5-5949-4e58-8414-bcfd55390dde";
 BOOL const TI_APPLICATION_ANALYTICS = true;
 

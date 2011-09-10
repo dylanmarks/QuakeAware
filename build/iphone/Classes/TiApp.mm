@@ -259,7 +259,7 @@ void MyUncaughtExceptionHandler(NSException *exception)
 
 - (void)boot
 {
-	NSLog(@"[INFO] %@/%@ (%s.2fdc0c5)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
+	NSLog(@"[INFO] %@/%@ (%s.878906d)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
 	
 	sessionId = [[TiUtils createUUID] retain];
 
@@ -496,6 +496,8 @@ void MyUncaughtExceptionHandler(NSException *exception)
 
 #pragma mark Push Notification Delegates
 
+#ifdef USE_TI_NETWORKREGISTERFORPUSHNOTIFICATIONS
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
 	// NOTE: this is called when the app is *running* after receiving a push notification
@@ -543,6 +545,8 @@ void MyUncaughtExceptionHandler(NSException *exception)
 		[remoteNotificationDelegate performSelector:@selector(application:didFailToRegisterForRemoteNotificationsWithError:) withObject:application withObject:error];
 	}
 }
+
+#endif
 
 //TODO: this should be compiled out in production mode
 -(void)showModalError:(NSString*)message

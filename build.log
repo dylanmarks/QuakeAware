@@ -1,0 +1,26 @@
+Logfile initialized
+[INFO] logfile = /Users/dylanmarks/Sites/QuakeAware/build.log
+[DEBUG] /Users/dylanmarks/Library/Application Support/Titanium/mobilesdk/osx/1.7.2/android/builder.py simulator QuakeAware /Applications/android-sdk /Users/dylanmarks/Sites/QuakeAware com.QuakeAware 10 WVGA854 
+[INFO] Building QuakeAware for Android ... one moment
+[INFO] Titanium SDK version: 1.7.2 (07/21/11 09:36 97c3689)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 15 seconds)
+[DEBUG] waited 15.139900 seconds on emulator to get ready
+[INFO] Waiting for the Android Emulator to become available
+[DEBUG] com.QuakeAware installed? True
+[INFO] Fastdev server running, deploying in Fastdev mode
+[INFO] Copying project resources..
+[INFO] Tiapp.xml unchanged, skipping class generation
+[DEBUG] Processing Android resource drawables
+[WARN] Use of AndroidManifest.custom.xml is deprecated. Please put your custom manifest as "AndroidManifest.xml" in the "platform/android" directory if you do not need to compile for versions < 1.5
+[INFO] Detected custom ApplicationManifest.xml -- no Titanium version migration supported
+[INFO] Waiting for SDCard to become available..
+[INFO] Re-launching application ... QuakeAware
+[INFO] Launching application ... QuakeAware
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.QuakeAware/.QuakeawareActivity }
+
+[INFO] Android Emulator has exited

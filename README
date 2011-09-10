@@ -1,20 +1,8 @@
-QuakeAware is an iphone and android mobile application. 
-http://quakeaware.org
-Stay aware and stay prepared with QuakeAware, storing vital information locally on your phone such as basic first aid, emergency contact plans, how to turn off your gas line and other utilities and a news feed on earthquake locations. This free download captures the key info you need to keep you and your family safe.
-
-We hope that others will help to make this a useful tool to help your community. The main thing we want to expand on is the My City feature, to make available localized content for your community. We need to build out some sort of dynamic infrastructure to easily add new communities. We have a web server available to host this infrastructure if necessary. 
-
-If you have any questions, please feel free to contact info@quakeaware.org
-
-This software uses the Appcelerator Titanium framework to be able to publish to both iOS and Android with the same base app code.  You will need to use the Titanium developer tools, as well as have the iphone and/or android sdks installed. 
-http://appcelerator.com
 
 
--------
-
-This software is released under the GPL V3 license. 
-
+----
 Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
+
 Titanium is licensed under the Apache Public License (Version 2). Please
 see the LICENSE file for the full license.
 

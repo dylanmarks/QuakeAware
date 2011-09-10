@@ -11,9 +11,14 @@ Ti.include("navigationControl.js");
 		Titanium.UI.LANDSCAPE_RIGHT
 	];*/
 	Ti.API.info("Creating web view");
-	var webview = Ti.UI.createWebView();
+	var webview = Ti.UI.createWebView({
+	    url:'index.html',
+	   // scalesPageToFit:true,
+	    Width:'auto',
+	    Height:'auto'
+	});
 	//win.open();
-	webview.url = "index.html";
+	//webview.url = "index.html";
 	win.add(webview);
 	/*if (Titanium.Platform.name == 'iOS')
 	{
